@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+	{% block title %}Dashboard{% endblock %}
+	{% block content %}
+				
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					
+			<h1>Account Details and Transactions</h1>	
+				
+			<br>
+			<br>
+				
+			<span><img src="https://png.pngtree.com/svg/20170719/customer_276528.png" class="img responsive" style="max-height:80px;max-width:80px;"/>
+			<font size="6">{{user_data.username}}</font></span>
+			<hr \>
+			<h4>Email: {{user_data.email}}</h4>
+			<h4>Contact: {{user_data.contact}}</h4>
+			<h4>Address: {{user_data.address}}</h4>
+			<h4>Gender: {{user_data.gender}}</h4>
+			<h4>Age: {{user_data.age}}</h4>
+
+			<br>
+					
+			<h2>Order History:</h2>
+			<hr />
+			
+			{% for data in orders %}
+				<h4>Order ID: {{data.oid}}</h4>
+				<h4>Doctor ID: {{data.did}}</h4>
+				<h4>Customer ID: {{data.cid}}</h4>
+				<h4>Date & Time: {{data.date}}</h4>
+				<br>
+				<br>
+			{% endfor %}
+					
+							
+						
+		</div>
+	
+	{% endblock %}
+	

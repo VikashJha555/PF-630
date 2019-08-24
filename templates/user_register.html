@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+	{% block title %}Register{% endblock %}
+	{% block content %}
+			
+			<h1>Registration Form</h1>
+			
+			<br>
+			
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						
+						<form method="post" action="{{url_for('role_register')}}">
+						
+							<div class="form-group">
+								<label for="inputname">Username</label>
+								<input class="form-control" name="Username" type="text" placeholder="Pick a unique Username" />
+							</div>
+							
+							<div class="form-group">
+								<label for="inputpass">Password</label>
+								<input class="form-control" name="Password" type="password" placeholder="Set Password" />
+							</div>
+							
+							<div class="form-group">
+								<label for="inputmail">Email</label>
+								<input class="form-control" name="Email" type="text" placeholder="Valid Email"></input>
+							</div>
+							
+							<div class="form-group">
+								<label for="inputcontact">Contact</label>
+								<input class="form-control" name="Contact" type="text" placeholder="10 digit number with regional code (ex:+919091090813) "></input>
+							</div>
+							
+							<div class="form-group">
+								<label for="inputaddress">Address</label>
+								<input class="form-control" name="Address" type="text" placeholder="Residential information"></input>
+							</div>
+							
+							<div class="form-group">
+								<label for="inputgender">Gender</label>
+								<input class="form-control" name="Gender" type="text" placeholder="Gender"></input>
+							</div>
+							
+							<div class="form-group">
+								<label for="inputage">Age</label>
+								<input class="form-control" name="Age" type="number" placeholder="Age in years"></input>
+							</div>
+							
+								<button type="submit" class="btn btn-success">Submit</button>
+							
+						</form>
+					
+					</div>
+				</div>
+				
+	{% endblock %}

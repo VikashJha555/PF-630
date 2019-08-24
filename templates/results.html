@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+	{% block title %}Results{% endblock %}
+	{% block content %}
+	
+		{% for info in data %}
+			<span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBT7p0Pf1Cua06aUuhZdFX60YSmh-FOq-UYbNJ9v2_PkgK6ycjwA" class="img responsive" style="max-height:80px;max-width:80px;"/>
+			<font size="5">          Doctor ID: {{info.did}}</font></span>
+			<hr />
+			<h3>Specialisation: {{info.specialisation}}</h3>
+			<h5>Rating: {{info.rating}}</h4>
+			<h3>Consulatancy Fee: {{info.fee}}</h3>
+			<h5>Availability: {{info.availablity}}</h5>
+			<h5>Location: {{info.location}}</h5>
+			<a href="order"><button class="btn btn-warning">Request Visit</button></a>
+			<br>
+			<br>
+			<br>	
+		{% endfor %}
+		
+	{% endblock %}

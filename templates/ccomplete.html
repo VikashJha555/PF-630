@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+	{% block title %}Register{% endblock %}
+	{% block content %}
+			
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					
+			<h1>Registration Complete</h1>
+		
+			<br>
+			
+			<span><img src="https://png.pngtree.com/svg/20170719/customer_276528.png" class="img responsive" style="max-height:80px;max-width:80px;"/>
+			<font size="6">{{userdata.username}}</font></span>
+			<hr \>
+			<h4>Email: {{userdata.email}}</h4>
+			<h4>Contact: {{userdata.contact}}</h4>
+			<h4>Address: {{userdata.address}}</h4>
+			<h4>Gender: {{userdata.gender}}</h4>
+			<h4>Age: {{userdata.age}}</h4>
+
+			<br>
+			
+			<h4>Profile Type: {{roledata.rname}}</h4>
+	
+			<br>
+			
+			<h4>CustomerID: {{cusdata.cid}}</h4>
+			<h4>Medical Condition: {{cusdata.medical_condition}}</h4>
+			
+			<br>
+			
+			<a href="listings"><h2><button class="btn btn-warning">Listings</button></h2></a><br>
+		
+		</div>
+	
+	{% endblock %}
+		

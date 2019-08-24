@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+	{% block title %}Register{% endblock %}
+	{% block content %}
+			
+		<center>
+			<h1>Choose your Profile type</h1>
+		</center>
+		
+		<br>
+		<br>
+		
+		<div class="row">
+			
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				
+				<center>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBT7p0Pf1Cua06aUuhZdFX60YSmh-FOq-UYbNJ9v2_PkgK6ycjwA" style="max-height:300px;max-width:300px;">
+				</center>
+				
+			</div>
+				
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			
+				<br>
+			
+				<center>
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsi__P41H_bOoI4dgzkfFmg1oBhvv5mQ6_x9W1Zls53mSFGoJP" style="max-height:200px;max-width:200px;">
+				</center>
+				
+			</div>
+			
+		</div>	
+		
+				
+		<br>
+		<br>
+		<br>
+				
+		<div class="row">
+			<div class="col-align-self-center">
+				
+				<form method="post" action="{{url_for('profile_register')}}">
+							
+							<center>
+							
+								<div class="form-group">
+									<label for="inputname">Role</label>
+									<input class="form-control" name="Role" type="text" placeholder="Pick a Role (Customer/Doctor)" />
+								</div>
+								
+								<button type="submit" class="btn btn-success">Submit</button>
+								
+							</center>
+						
+				</form>
+					
+			</div>
+		</div>
+				
+	{% endblock %}

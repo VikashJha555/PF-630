@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+	{% block title %}Listings{% endblock %}
+	{% block content %}
+	
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			{% for data in docdata %}
+				<span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBT7p0Pf1Cua06aUuhZdFX60YSmh-FOq-UYbNJ9v2_PkgK6ycjwA" class="img responsive" style="max-height:80px;max-width:80px;"/>
+				<font size="5">          Doctor ID: {{data.did}}</font></span>
+				<hr />
+				<h3>Specialisation: {{data.specialisation}}</h3>
+				<h5>Rating: {{data.rating}}</h4>
+				<h3>Consulatancy Fee: {{data.fee}}</h3>
+				<h5>Availability: {{data.availablity}}</h5>
+				<h5>Location: {{data.location}}</h5>
+				<a href="order"><button class="btn btn-warning">Request Visit</button></a>
+				<br>
+				<br>
+				<br>
+			{% endfor %}
+				
+		</div>
+		
+	{% endblock %}	
+		

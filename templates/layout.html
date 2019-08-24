@@ -1,0 +1,79 @@
+<html>
+	
+	<head>
+		
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../static/css/material-kit.css" rel="stylesheet"/>
+		
+		<title>{% block title %}{% endblock %}</title>	
+	
+	</head>
+	
+	<body>
+	
+	
+	<!-- Navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" style="margin:-2px -2px;">
+		  
+			<div class="container-fluid">
+			
+				<div class="navbar-header">
+			  
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+					</button>
+				  
+					<a class="navbar-brand" href="/"><span><img src="data:image/png;base64,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" class="img responsive" style="max-height:60px;max-width:100px;margin:-15px -14px;"/></span></a>
+			
+				</div>
+			
+				<div class="collapse navbar-collapse" id="myNavbar">
+				  
+				  <ul class="nav navbar-nav">
+					<li><a href="listings">Listing</a></li>
+					<li><a href="user_register">Register</a></li>
+					<li><a href="ezyDiagnose">ezyDiagnosis</a></li>
+					<li><a href="search">Search</a></li>
+				  </ul>
+				  
+				  <ul class="nav navbar-nav navbar-right">
+					<li><a href="login"><span class="glyphicon glyphicon-log-in"></span> User Dashboard</a></li>
+				  </ul>
+				  
+				</div>
+				
+			</div>
+		
+		</nav>
+
+		<div class="container" >
+		
+			<br>
+			<br>
+			<br>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					
+					{% block content %}
+					{% endblock %}
+				
+				</div>
+		</div>
+		
+		
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="/static/js/jquery.min.js" type="text/javascript"></script>
+	    <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+	    <script src="/static/js/material.min.js"></script>
+	</body>
+</html>

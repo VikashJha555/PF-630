@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+	{% block title %}Order Placed{% endblock %}
+	{% block content %}
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					
+			<h1>Request Complete</h1>
+			
+			<br>
+			
+			Order ID: {{odata.oid}}
+			<br>
+			Doctor ID: {{odata.did}}
+			<br>
+			Customer ID: {{odata.cid}}
+			<br>
+			Date: {{odata.date}}
+			
+			<br>
+			
+			<h4>Your request is being processed</h4>
+			<a href="listings"><h2><button class="btn btn-warning">Listings</button></h2></a><br>
+		
+		</div>
+	
+	{% endblock %}
+	
